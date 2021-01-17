@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 1,
+        "name" : "Brian Lara", 
+        "company" : "charous cricket academy",
+        "phone" : "123-456"
+    },
+    {
+        "id" : 2,
+        "name" : "David Moss", 
+        "company" : "Infinite solution",
+        "phone" : "123-456"
+    },
+    {
+        "id" : 3,
+        "name" : "Charlie Jones", 
+        "company" : "Technoic Limited",
+        "phone" : "123-456"
+    }
+]

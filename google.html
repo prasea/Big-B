@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+           margin: 0;
+           padding: 0;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       } 
+       header{
+           width: 100%;
+       }
+       ul{
+           list-style: none;
+       }
+       .nav-bar{
+           float: right;
+       }
+       .nav-bar li{
+           display: inline-block;
+           padding: 9px;
+       }
+       .nav-bar #sign-in{
+           background-color: #4887ef;
+           margin-right: 25px;
+           padding: 7px 14px;
+           border-radius: 3px;
+           font-weight: bold;
+       }
+       .nav-links{
+           color: #404040;
+       }
+       a{
+           text-decoration: none;
+       }
+       .nav-bar li.nav-links a:hover{
+           text-decoration: underline;
+       }
+       #sign-in:hover{
+           box-shadow: 1px 1px 5px #999;
+       }
+       #sign-in a{ color: #fff;}
+       /*Google logo Placement */
+       #google-logo{
+            clear: both;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            padding-top: 112px;
+            padding-bottom: 20px;
+        }
+        .form{
+            text-align: center;
+        }
+        .form #form-search{
+            width: 450px;
+            padding: 10px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        .buttons{
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 300px;
+        }
+        .buttons input[type="submit"]{
+            display: inline-block;
+            padding: 8px 4px;
+        }
+        footer{
+            background: #f2f2f2;
+            border-top: solid 2px #e4e4e4;
+            bottom: 0;
+            padding-bottom: 0;
+        }
+        .footer-left{
+            float: left;
+        } .footer-left li{
+                display: inline-block;
+                color: #666;
+                font-size: 14px;
+                padding: 13px;
+            }
+        .footer-right{
+            float: right;
+        } .footer-right li{
+                display: inline-block;
+                color: #666;
+                font-size: 14px;
+                padding: 13px;  
+            }
+        @media screen and (max-width : 576px){
+            .nav-bar .nav-links{
+                display:  none;
+            }
+            .form #form-search{
+                width: 350px;
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+            .footer-left, .footer-right{
+                float: none;
+                text-align: center;
+            }
+            .footer-left li, .footer-right li{
+                padding: 5px;
+            }
+        }        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <li class="nav-links" id="gmail"><a href="#">Gmail</a></li>
+                <li class="nav-links"><a href="#">Images</a></li>
+                <li id="sign-in"><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Google Img -->
+    <div class="google">
+        <a href="#" id="google-logo"><img src="calculator.png" alt="Google calculator" height="150px" width="150px"></a>
+    </div>
+
+    <!-- Google Search -->
+    <div class="form">
+        <form>
+            <label for="form-search"></label>
+            <input type="text" id="form-search" placeholder="Search google or type URL">
+        </form>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <input type="submit" value="Google Seach">
+        <input type="submit" value="I'm Feeling Lucky">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="footer-left">
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <ul class="footer-right">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

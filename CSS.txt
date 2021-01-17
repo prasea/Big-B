@@ -1,0 +1,207 @@
+Inline CSS means writing CSS rules inside HTML tags. Ex: <h1 style="color:red; font-weight:bold;">Cascading Style</h1>
+
+
+CSS comment,
+	<style>
+		/*
+		Comments in CSS in .html file need to be inside <style> tags. 
+		If you write outside, then follow HTML comment i.e. <!-- --> 
+		*/
+	</style>
+	
+Linking of CSS from one file to other. We have actual stylesheet on style2.css but we import that stylesheet on style1.css.
+
+*style1.css
+	@import "style2.css";
+ *style2.css	
+	h1{
+		property : value;
+	}
+*index.html	
+	<link rel="stylesheet" href="style1.css">
+ 
+ *style.css
+	@import "header.css";
+	@import "navigation.css"
+	@import "content.css"
+	@import "footer.css"
+	
+12 different types of Selectors,
+
+	selector{
+		property1: value1; => Declaration
+		property2: value2; => Declaration
+	}
+	Using elements name as selector, 
+		h1{
+			color : blue;
+		}
+		
+	1. Universal selector : asterik(*)
+		*{
+			property : value;
+		}
+		Rules will be applicable to all the HTML tags.
+		
+	2. Type selector:
+		h1, p{
+			property : value;
+		}
+		
+	3. Class selector: It is custom selector for which we assign property="property-name"  to HTML element and select it using dot(.)
+		.className{
+			property : value;
+		}
+		Ex: 
+			.green-border{ border-style:solid; color:green; }
+			.red-border{ border-style:solid; color:red; }
+			
+			h1.green-border{ border-width: 12px } //Only h1 tag will have this property even if other tags has green-border class.
+			
+	4. Id selector:	 An id is an attribute that uniquely describes an element.
+			#green-border{ border-style:solid; color:green; }
+			.green-border{ border-style:solid; color:green; }
+			#text-red{ text-color : red; }
+			
+			<h1 id="green-border">Id selector : Custom Name </h1>
+			<h1 class="green-border">Class selector : Custom Name </h1>
+			
+		The difference is that you can't have multiple rules for id selector i.e. ID should be only one per element
+		Ex: <h1 id="green-border text-red">Id selector : Custom Name </h1> //Both styling will be vanished.
+		
+		*ID should be only one per element.
+			<h1 id="green-border text-red">Id selector : Custom Name </h1>
+		
+		*ID's are unique
+			<h1 id="green-border ">Id selector : Custom Name </h1>
+			<h1 id="green-border ">Id selector : Custom Name </h1>
+		In JS we grab the element by .getElementById() which grabs single element.
+		*Each element can only have one ID
+		*Each page can have only element with that ID
+		
+<style>
+	#red-border{ border: solid 2px red; }
+	.green-border{ border: solid 2px green; }
+	.text-italics { font-style : italic; }
+</style
+	
+	<h1 class="green-border" id="red-border">Hello</h1>
+	
+	<h1 id="red-border" class="green-border" >Hello</h1>
+
+Sequence in which we use property="property-name" doesn't match but Id has more precedence than Class if the rule is same
+
+	<h1 id="red-border" class="green-border text-italics" >Hello</h1>		
+If you have both id & class, all the additional rules of class will be applied to tags which in this case is text-italics. Eventhough id > class.
+
+	5. Attribute selector	
+		Rules will be applied only if the element has that attribute mentioned inside [];
+<style>
+	p[class]{
+		border-color: red;
+		font-weight: border;
+	}
+	p[class=blue-color]{
+		border-color : blue;
+	}
+</style>
+	
+	<p>I am lorem ipsum.</p>
+	
+	<p class=" "> I am lorem ipsum.</p>
+	
+	<p class="blue-color"> I am lorem ipsum.</p>
+	
+6. Child selector : parent>child { ..; ..; ..; }
+	Style will be applied to direct child only.
+	
+<style>
+	p>a{ color: red; }
+	div>a{color : blue; }
+</style>
+
+<div>
+	<p>
+		<a href="#">Red</a>
+	</p>
+	
+	<a href="#">Blue</a>
+	
+7. Descendant selector
+	parent [space_bar] child
+	
+body a{
+	color: red;
+}
+
+	Make every anchor text red irrespective of hierarchy i.e <a> maybe direct child of any other element
+</div>
+
+8. Adjacent Sibling selector
+	<style> div + a{ color:red; } </style>
+div & a should be Ajacent and Sibling.
+	<body>
+		<p>This is <a href="#">paragraph</a></p>
+		<div>
+			<a href="#">paragraph</a>
+		</div>
+		<a href="#">paragraph</a>*
+		<h1>This below anchor tag is Sibling but not Ajacent to div tag</h1>
+		<a href="#">paragraph</a>
+	</body>
+	
+8. General adjacent sibling selector
+	<style> div ~ a{ color : red } </style>
+They have to be Sibling i.e. on same level but not Adjacent i.e. side by side. 
+	<body>
+		<div>
+			<a href="#">paragraph</a>
+		</div>
+		<a href="#">paragraph</a>*
+		<h1>This below anchor tag is Sibling but not Ajacent to div tag</h1>
+		<a href="#">paragraph</a>*
+	</body>
+	
+#Psudo Class & Elements
+	For some of the selector, we have pseudo classes which we can define via colon then pseudoClassName
+	<style>
+		a:link{ color: blue; }
+		a:visited { color: red; }
+		a:hover{ color: green; }
+		a:active{ color: yellow; } => Click & Hold 
+	</style>
+These above pseudo class will be applied depending upon the action that happen on Links.
+
+	Pseudo elements is defined with Double colons
+	<style>
+		h1::after{ content: "!!"; }
+		p::first-letter{ font-size: 200%; }
+	</style>
+	
+	<h1> Heading </h1> O/P: Heading!!
+
+#difference between css height : 100% vs height : auto
+	
+	height: 100% gives the element 100% height of its parent container.
+
+	height: auto means the element height will depend upon the height of its children.
+
+Consider these examples:
+
+height: 100%;
+
+<div style="height: 50px">
+    <div id="innerDiv" style="height: 100%">
+    </div>
+</div>
+#innerDiv is going to have height: 50px
+
+height: auto
+
+<div style="height: 50px">
+    <div id="innerDiv" style="height: auto">
+          <div id="evenInner" style="height: 10px">
+          </div>
+    </div>
+</div>
+#innerDiv is going to have height: 10px

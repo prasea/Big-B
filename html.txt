@@ -1,0 +1,99 @@
+<form> has two main attribute action=" " & method=" ".
+
+<form method="get/post" action="results.html">
+	<fieldset>
+		<legend>Form submit using GET/POST</legend>
+			<label for="input_fName">First Name</label>
+			<input type="text" id="input_fName" placeholder="Enter you first name" name="FirstName">
+			<label for="input_lName">Last Name</label>
+			<input type="text" id="input_lName" placeholder="Enter you last name" name="LastName">
+		
+			<input type="submit">
+			<input type="reset" value="Clear form">
+	</fieldset>
+</form>
+
+Only thing you have to remeber in radio button is basically the name=" " attribute. We have to give the SAME NAME then radio buttons become one group so we can tick only one.
+
+<ul>
+	<li>
+		<label for="radio_option1">Option 1</label>
+		<input type="radio" id="radio_option1" name"radio">
+	<li>
+	<li>
+		<label for="radio_option2">Option 2</label>
+		<input type="radio" id="radio_option2" name"radio">
+	<li>
+</ul>
+
+For checkbox, name=" " attribute need not be same b/c we can check several checkbox.
+	Check1: <input type="checkbox" name="checkbox1">
+	Check2 : <input type="checkbox" name="checkbox2">
+	
+	
+<form>
+	<h1> Student Information Form</h1>
+	Full Name : <input type="text" palceholder="Name here" name="name">
+	
+	Age : <input type="number" placeholder="Your Age" name="age">
+	
+	Email ID : <input type="email" placeholder="Email ID" name="email">
+	
+	Mobile No : <input type="tel" placeholder="Contact Number" name="mobile">
+	
+	Applying for
+	<select>
+		<optgroup label="Primary">
+			<option>1</option>
+			. . . . . . .
+			<option>5</option>
+		</optgroup>
+		<optgroup label="Secondary">
+			<option>6</option>
+			
+♣	♣	♣	♣	♣	DIV AND SPAN	♣	♣	♣	♣	♣
+
+<div> tag is used to create division. They help to divide the tags into group and apply special formatting on to them. They act as container to wrap elements together. You group elements using div but You don't write content using  div. Inside div we can have "n" number of tags.
+
+<span> tag is also used to group elements together. 
+
+HTML is not Case-sensitive b/c we can write either <h1> or <H1>. True for every tags.
+
+White spaces are not preserved in HTML. They are stripped off. But if you look Page Source, there are white spaces implies they are ignored by HTML.
+
+HTML entities are short notation used to replace special charatcter when to display them onto page. Starts with ampersand(&) Ends with Semicolone(;) 
+
+♣	♣	♣	♣	♣	IFRAMES	♣	♣	♣	♣	♣
+If you want to embed pages into pages or If you want to display more than one pages into single page., then you go with an iframe.
+
+<iframe src=" " height=" " width=" "> </iframe>
+
+iframe is just like <img>, to display iframe we just need the reference of HTML page i.e. src="somePage.html"
+
+We can give name to the frames using attribute [name=" "]. Eg
+<iframe src="page1.html" height="300"> </iframe>
+<iframe src="page2.html" height="300" name="content-frame> </iframe>
+
+So, we assigned name to second frame. Now for all the links in first frame, we assign target as content-frame.
+
+<iframe> can be used to embed YouTube video.
+
+Additional HTML tags.
+
+<header> is used to group headings. Eg: <header> <h1>Welcome to the Jungle</h1> </header>
+
+<nav> to group Navigation links.
+
+<aside> is for Sidebar though we have to use CSS to align it. 
+	<aside>
+		<figure>
+			<img src="img.jpeg" height="200px" width="200px">
+			<figcaption>Big jungle</figcaption>
+		</figure>
+	</aside>
+
+<section> is for Main content.
+
+<footer> if for footer section.
+
+Using these above tags gives clear readability of HTML code.

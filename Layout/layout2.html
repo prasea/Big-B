@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 940px;
+            margin: 0 auto;
+            font: 1.5rem "Georgia", Arial, sans-serif;
+        }
+        section, article, header, footer, aside{
+            display: block;
+        }
+        header, footer{
+            text-align: center;
+        }
+        article header{
+            text-decoration: underline;
+        }
+        nav{
+            background-color: #DBFF33;        
+        }
+        nav ul{
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+        nav ul li{
+            display: inline-block;
+            background-color: #75FF33;
+            padding: 10px;
+            margin: 10px;
+        }
+        figure img{
+            height: 100px;
+            width: 100px;
+        }
+        aside.aleft{
+            width: 25%;
+            float: left;
+            border: 1px solid #333;
+        }
+        aside.aright{
+            width: 25%;
+            float: right;
+            border: 1px solid #333;
+        }
+        section{
+            width: 45%;
+            float: left;
+            border: 1px solid #ccc;
+            padding: 0 10px;
+            background-color: aliceblue;
+            margin-left: 1%;
+        }
+        footer{            
+            border: 1px solid #75FF33;   
+            margin-top: 10px;       
+        }
+        
+    </style>
+</head>
+<body>
+    <header><h1>Page Layout 1</h1></header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside class="aleft">
+            <figure>
+                <img src="https://source.unsplash.com/weekly?water" alt="Water source">
+                <figcaption>Natural Serenty</figcaption>
+            </figure>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+        <section>
+            <article>
+                <header><h2>Article 1</h2></header>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem sint minima neque, fugiat alias quaerat? Delectus quos accusantium consectetur distinctio.</p>
+                </div>
+                <p>#End of articele</p>            
+            </article>
+            <article>
+                <header><h2>Article 2</h2></header>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem sint minima neque, fugiat alias quaerat? Delectus quos accusantium consectetur distinctio.</p>
+                </div>
+                <p>#End of articele</p>            
+            </article>
+        </section>
+
+        <aside class="aright">
+            <figure>
+                <img src="https://source.unsplash.com/weekly?water" alt="Water source">
+                <figcaption>Natural Serenty</figcaption>
+            </figure>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <div style="clear: both;"></div>
+    <footer>
+        <p>Copyright &copy; 2020 : All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

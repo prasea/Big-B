@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Position</title>
+    <style>
+        
+        body, html{
+            height: 100%; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            margin: 80px;
+        }
+        p{
+            border: 1px solid red;
+            border-bottom: none;
+            margin:50px auto;
+            max-width: 660px;
+            line-height: 1.5;
+        }
+        p::first-letter{
+            font-size: 50px;
+        }
+        .announcement-top{
+            background-color: red;
+            color: white;
+            padding: 20px;
+            opacity: .75;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .announcement-bottom{
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            opacity: .75;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="announcement-top">Get Flat 10% OFF</div>
+    <div class="announcement-bottom">Footer fixed at top.</div>
+    <h1>Fixed Position</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae tempora quia fugit omnis officiis, minima deleniti eveniet sapiente ratione repellendus asperiores placeat, non nam accusamus deserunt aliquam eligendi saepe temporibus nemo. Excepturi impedit aliquam ea eos? Labore sed nihil ea, itaque, explicabo quam iure cumque vero dolores inventore eos praesentium doloribus eum officia, laudantium molestias? Eveniet maiores alias accusamus nisi explicabo reprehenderit repellat est quam officiis, saepe modi quis amet beatae architecto nam voluptatum ipsum blanditiis obcaecati ad veritatis atque commodi a eum aut. Eos repellendus dignissimos sint aut quas excepturi aliquam et, a deserunt harum, corrupti sapiente maiores cupiditate voluptas id deleniti iure impedit ipsam suscipit, facere in rerum vel natus sequi? Laborum, dolores sapiente maiores itaque accusamus iste vel blanditiis, sint necessitatibus excepturi neque voluptatum obcaecati nihil est, officiis quaerat incidunt aperiam facilis fuga dolorum delectus repellendus nam odio accusantium. Ad nihil, hic quisquam ipsum odit suscipit natus eum delectus eius dolores, maxime voluptatem! Vero totam minima debitis sequi. Deserunt aspernatur laboriosam itaque exercitationem culpa laudantium et commodi eum, vel aut magnam repudiandae minus maiores doloremque. Beatae quia reiciendis tempora ea distinctio quaerat magnam ipsam harum dignissimos eligendi consequuntur commodi, exercitationem dicta ad quam, eveniet eum, non sunt.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae tempora quia fugit omnis officiis, minima deleniti eveniet sapiente ratione repellendus asperiores placeat, non nam accusamus deserunt aliquam eligendi saepe temporibus nemo. Excepturi impedit aliquam ea eos? Labore sed nihil ea, itaque, explicabo quam iure cumque vero dolores inventore eos praesentium doloribus eum officia, laudantium molestias? Eveniet maiores alias accusamus nisi explicabo reprehenderit repellat est quam officiis, saepe modi quis amet beatae architecto nam voluptatum ipsum blanditiis obcaecati ad veritatis atque commodi a eum aut. Eos repellendus dignissimos sint aut quas excepturi aliquam et, a deserunt harum, corrupti sapiente maiores cupiditate voluptas id deleniti iure impedit ipsam suscipit, facere in rerum vel natus sequi? Laborum, dolores sapiente maiores itaque accusamus iste vel blanditiis, sint necessitatibus excepturi neque voluptatum obcaecati nihil est, officiis quaerat incidunt aperiam facilis fuga dolorum delectus repellendus nam odio accusantium. Ad nihil, hic quisquam ipsum odit suscipit natus eum delectus eius dolores, maxime voluptatem! Vero totam minima debitis sequi. Deserunt aspernatur laboriosam itaque exercitationem culpa laudantium et commodi eum, vel aut magnam repudiandae minus maiores doloremque. Beatae quia reiciendis tempora ea distinctio quaerat magnam ipsam harum dignissimos eligendi consequuntur commodi, exercitationem dicta ad quam, eveniet eum, non sunt.</p>
+</body>
+</html>

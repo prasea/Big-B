@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 940px;
+            margin: 0 auto;
+            font: 1.5rem "Georgia", Arial, sans-serif;
+        }
+        section, article, header, footer, aside{
+            display: block;
+        }
+        header, footer{
+            text-align: center;
+        }
+        article header{
+            text-decoration: underline;
+        }
+        figure img{
+            height: 150px;
+            width: 150px;
+        }
+        aside{
+            width: 30%;
+            float: left;
+            border: 1px solid #333;
+        }
+        section{
+            width: 60%;
+            float: right;
+            border: 1px solid #ccc;
+            padding: 0 10px;
+            background-color: aliceblue;
+
+        }
+        .wrapper{
+            clear: both;
+            padding-top: 10px;
+        }
+        footer{            
+            border: 1px solid #75FF33;           
+        }
+        
+    </style>
+</head>
+<body>
+    <header><h1>Page Layout 1</h1></header>
+    <aside>
+        <figure>
+            <img src="https://source.unsplash.com/weekly?water" alt="Water source">
+            <figcaption>Natural Serenty</figcaption>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <section>
+        <article>
+            <header><h2>Article 1</h2></header>
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem sint minima neque, fugiat alias quaerat? Delectus quos accusantium consectetur distinctio.</p>
+            </div>
+            <p>#End of articele</p>            
+        </article>
+        <article>
+            <header><h2>Article 2</h2></header>
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem sint minima neque, fugiat alias quaerat? Delectus quos accusantium consectetur distinctio.</p>
+            </div>
+            <p>#End of articele</p>            
+        </article>
+    </section>
+    <!--
+Why top margin of html element is ignored after floated element? 
+        The trick to getting the wrapper to work right is to have the white space be internal white space. In other words, the wrapper uses padding instead of margin. This means whatever is going on outside the wrapper (like other floating elements) won't really matter. OR
+
+        you could simply add a div between floated and cleared elements i.e. <div style="clear:both;"</div>
+     -->
+    <div class="wrapper">
+        <footer>
+            <p>Copyright &copy; 2020 : All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

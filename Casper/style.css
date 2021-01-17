@@ -1,0 +1,59 @@
+body{
+    color: #1e306e;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+header{
+    background-image: url("../img/matress.jpg");
+    background-color: #30373b;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    height: 400px;
+    padding: 40px;
+    
+}
+.logo{
+    padding: 5px;
+    height: 40px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+p.top-liner{ 
+    font-size:  18px;
+    margin: 0;
+}
+
+header a.main-button{
+    margin-top : 80px;
+    padding: 15px;
+    border-radius: 0.25rem;
+    background-color: #1e306e;
+    color: white;
+    display: inline-block;
+}
+header p.footer-text{
+    padding-top: 150px;
+}
+.testimonials{text-align: center;}
+
+.reviews{
+    display: inline-block;
+    width: 350px;
+    height: 150px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: #30373b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

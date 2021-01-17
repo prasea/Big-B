@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Itim', cursive;
+        }
+        .container{
+         max-width: 960px;   
+         margin: 30px auto;
+        }
+        .box{
+            background-color: #f4f4f4;
+            border: 2px solid #444;
+            margin-bottom: 10px;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .box p{
+            text-align: left;
+            text-align: right;
+            text-align: center;
+            text-align: justify;
+        }
+        #box-2{
+            float: left;
+            width: 68%;
+        }
+        #box-3{
+            float: right;
+            width: 30%;
+        }
+        /* Links and Button Styling */
+        .btn-link{
+            text-align: center;
+        }
+        a{
+            color: #407294;
+            text-decoration: none;
+        }
+        .btn{
+            color: #fff;
+            background-color: #407294;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .btn:hover{
+            background-color: #335b76;
+            color: #f4f4f4;
+            text-decoration: underline;
+        }
+        /* Side menu styling */
+        .side-menu{
+            border: 1px solid #ddd;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+        }  
+        .side-menu li{
+            list-style-type: none;
+            line-height: 2.6em;
+            font-size: 18px;
+            border-bottom: 1px #ddd dotted;
+        }
+        .side-menu li:last-child{
+            border-bottom: none;
+        }
+        /* Navbar styling*/
+       .navbar{
+           list-style: none;
+           margin: 0;
+           padding: 0;
+           background-color: #4c6ca0;
+           border-radius: 10px;
+           overflow: auto;
+           width: 700px;
+       }
+       .navbar li{
+           float: left;
+       }
+       .navbar li a{
+           display: block;
+           padding: 10px 20px;
+           color: #fff;
+       }
+       .navbar li a:hover{
+           background-color: #5f5f5f;
+           color: #f5f5f5;
+           border-radius: 100px;
+       }
+      /* 12 */
+       .inline li{
+           display: inline;
+       }
+       .inline li a{
+           padding: 10px 20px ;
+       }
+       .block img{
+           display: block;
+           margin: auto;
+       }
+       .inline-block .box{
+           width: 32%;           
+           margin-bottom: 15px;
+           display: inline-block;
+           box-sizing: border-box;
+       }
+    </style>
+</head>
+<body>
+    <div id="dimensions" style="text-align: left;"></div>
+    <div class="container">
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+        <div style="clear: both;"></div>
+        <ul class="side-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+        <div id="box-1" class="box">
+            <h1>Heading</h1>
+            <p>My name is Allen Barray. I am fastest man alive. People call me The Flash.</p>
+        </div>    
+        <div id="box-2" class="box">
+            <h1>Heading</h1>
+            <p>Joey says How you doing? from Apartment 20. He earned 1 million per episode during final season</p>
+        </div>    
+        <div id="box-3" class="box">
+            <h1>Heading</h1>
+            <p>I can earn but first I must learn.</p>
+        </div> 
+        <div style="clear:both;"></div>   
+        <div id="box-4" class="box">
+            <h1>Heading</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, molestias?</p>
+        </div>
+    </div>
+    <div class="btn-link">
+        <h1>Buttons and Links</h1>
+        <a href="#" class="btn">My Link</a>
+        <br><br>
+        <button class="btn">My Button</button>
+    </div>
+    <hr>
+    <!-- Inline, Block, Inline-block -->
+    <div class="inline">
+        <ul>
+            <li><a href="#">Premier league</a></li>
+            <li><a href="#">La liga</a></li>
+            <li><a href="#">Serie A</a></li>
+        </ul>        
+    </div>
+    <div class="block">
+        <span>margin : auto; can't be used to center inline element. display the element as block before using it.</span>
+        <img src="https://www.kindpng.com/picc/m/276-2764257_instagram-icon-instagram-logo-small-size-hd-png.png" alt="Instagram">
+    </div>
+    <div class="inline-block">
+        <div class="box">
+            <h1>Box</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, numquam? Culpa deserunt a cupiditate.</p>
+        </div>
+        <div class="box">
+            <h1>Box</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, numquam? Culpa deserunt a cupiditate.</p>
+        </div>
+        <div class="box">
+            <h1>Box</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, numquam? Culpa deserunt a cupiditate.</p>
+        </div>
+    </div>
+    <script>
+        window.onload =  displayWindowSize;
+        window.onresize = displayWindowSize;
+        function displayWindowSize(){
+            myWidth = window.innerWidth;
+            myHeight = window.innerHeight;
+            document.getElementById('dimensions').innerHTML = myWidth+ "X"+ myHeight;
+        }
+    </script>
+</body>
+</html>

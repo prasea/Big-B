@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                /*Styling using em Unit */
+                #box1{
+                    font-size: 20px;
+                    background-color: aqua;
+                }
+                #box1 p{ 
+                    font-size: 1.5em;/* 1.5*20(fontSize of Parent) = 30px */
+                    padding: 1.5em;/* 1.5*30(fontSize of Element) = 45px */
+                }
+                #box1 ul{
+                    font-size: 1.2em;/* Since we have Nested ul, 1st ul fontSize relative to #box1, 2nd ul relative to 1st ul  and so on */
+                }
+                /* rem unit is relative to html i.e root element which is byDefault 16px */            
+                html{
+                    font-size: 10px;
+                    font-size: 62.5%;
+                }
+                #box2 h1{
+                    font-size: 2rem;
+                }
+                #box2 p{
+                    font-size: 1.6rem;
+                    line-height: 1.7rem; /* If we had used em unit, 1.7*(fontSize of <p>) but rem is 1.7*(fontSize of <html>)*/
+                }
+       /* Also the advantage of using rem is even if we change fontSize of browser which changes fontSize of html, it reflects if we have used rem. While em depends on fontSize of parent which in our case in #box1. But we don't specify fontSize to parent element, fontSize in em also depends on <html> & changing of browser fontSize is reflected.*/ 
+    </style>
+</head>
+<body>
+    <!-- em is relative to fontSize of direct Parent. -->
+    <div id="box1">
+        <h1>Box One</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic omnis sequi accusamus expedita soluta aperiam, mollitia numquam rerum rem recusandae?</p>
+        <!-- em is confusing while nesting of element -->
+        <ul>
+            <li>1</li>
+            <li>2
+                <ul>
+                    <li>1</li>
+                    <li>2
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+                    </li>
+                    <li>3</li>
+                </ul>
+            </li>
+            <li>3</li>
+        </ul>
+    </div>
+    <div id="box2">
+        <h1>Box Two</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat aliquam assumenda cum, consequatur amet quis vel quas laborum modi nihil!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ES6 PROMISES</h2>
+    <p>Promise is object that links between the producing code and consuming code togther. It is one way to handle asychronous code. To create a promise we use below Constructor syntax</p>
+    <code>
+        let promise = new Promise(function(resolve, reject){
+            This is executer function which is invoke immediately after promise is created. It takes two callback function which is provided by javascript engine. They are resolve and reject
+        })
+        To handle the promise,
+        promise.then(function(){
+            Runs when promise is resolved
+        }, function(){
+            Runs when promise is rejected
+        })
+    </code>
+    
+    <script src="app.js"></script>
+</body>
+</html>

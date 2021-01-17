@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        header{
+            background-color: #30373b;
+            padding: 20px;
+            text-align: center;
+        }
+        section{
+            margin: 20px 0;
+            text-align: center;
+            height: 70vh;
+        }
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+        section h1{
+            margin-bottom: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+        }
+        form .form-group{
+            margin: 20px;
+            padding: 10px 15px;
+        }
+        footer{
+            background-color: #30373b;
+            padding: 25px;
+            text-align: center;
+        }
+        footer a{
+            text-decoration: none;
+            color: #53cb53;
+        }
+    </style>
+</head>
+<body>
+
+        <header>
+            <h1>Survery.com</h1>        
+        </header>
+        <section>
+            <div class="container">
+                <h1>Submit your Survery data Today!</h1>
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="from-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email address">
+                    </div>
+                    <div class="form-group">
+                        <p>
+                            <label for="select">Select</label>
+                            <select id="select">
+                                <optgroup label="Option group 1">
+                                    <option>Option1 One</option>
+                                    <option>Option1 Two</option>
+                                    <option>Option1 Three</option>
+                                </optgroup>
+                                <optgroup label="Option group 2">
+                                    <option>Option2 One</option>
+                                    <option>Option2 Two</option>
+                                    <option>Option2 Three</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <p>
+                            <label for="checkbox_option1">Checkbox 1:</label>
+                            <input type="checkbox" id="checkbox_option1" checked>
+                            <label for="checkbox_option2">Checkbox 2:</label>
+                            <input type="checkbox" id="checkbox_option2">
+                            <label for="checkbox_option1">Checkbox 3:</label>
+                            <input type="checkbox" id="checkbox_option3">
+                        </p>
+                    </div>
+                    
+                    <input type="Submit"> &nbsp; &nbsp; <input type="reset" value="RESET">
+                </form>
+            </div>            
+        </section>
+
+        <footer>
+            <p>Copyright &copy; <a href="#" target="_blank">YourSite.com</a></p>
+        </footer>
+    
+</body>
+</html>

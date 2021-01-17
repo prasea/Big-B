@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+#navbar{
+    background-color: #333;
+    overflow:auto;
+}
+#navbar a{
+    text-decoration: none;
+    color: #fff;
+}
+#navbar h1.logo{
+    float: left;
+    padding-top: 20px;
+}
+
+#navbar ul{
+    float: right;
+    list-style: none;
+}
+#navbar ul li{
+    float: left;
+}
+#navbar ul li a{
+    display: inline-block;
+    padding: 20px;
+}
+#navbar ul li a:hover,
+#navbar ul li a.current{
+    background-color: #444;
+    color: #f7c08a;
+}
+/* Utility Classes */
+.container{
+    max-width: 960px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 20px;
+}
+.text-primary{
+    color: #f7c08a;
+}
+.lead{
+    font-size: 19px;
+}
+.btn{
+    display: inline-block;/*a tag is inline*/
+    text-decoration: none;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    cursor: pointer;    
+}
+.btn-light {
+    background-color: #f4f4f4;
+    color: #333;
+}
+.bg-dark{
+    background-color: #333;
+    color: #fff;
+}
+.bg-light{
+    background-color: #f4f4f4;
+    color: #333;
+}
+.bg-primary{
+    background-color: #f7c08a;
+    color: #333;
+}
+.btn:hover{
+    background-color: #f7c08a;
+    color: #333;
+}
+.py-1{padding: 10px 0;}
+.py-2{padding: 20px 0;}
+.py-3{padding: 30px 0;}
+
+.l-heading{font-size: 35px;}
+/* Showcase Styling */
+#showcase{
+    background: #444 url('../img/showcase.jpg') no-repeat center center/cover;
+    height: 600px;
+}
+.showcase-content{
+    text-align: center;
+    color: #fff;
+    padding-top: 200px;
+}
+.showcase-content h1{
+    font-size: 60px;
+}
+.showcase-content p{
+    /* padding-bottom: 20px; */
+    margin-bottom: 20px;
+}
+/* Showcase Styling */
+#home-info{
+    height: 450px;
+}
+#home-info .info-img{   
+    background-image: url('../img/photo-1.jpg');
+    float: left;
+    width: 50%;
+    min-height: 100%;
+}
+#home-info .info-content{
+    float: right;
+    width: 50%;
+    /* min-height: 100%; */
+    padding: 70px 30px;
+}
+.info-content h2{line-height: 2em;}
+.info-content p{line-height: 1.5em; padding-bottom: 20px;}
+.info-content a{float: right;}
+
+/* Featues */
+.box{
+    /* display: inline-block; cant align within single wrapper. creates new line while resizing browser*/
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+}
+.box i{ margin-bottom: 10px;}
+/* About Page styling */
+#about-info .info-left{
+    float: left;
+    width: 50%;
+    min-height: 100%;
+}
+#about-info .info-right{
+    float: right;
+    width: 50%;
+    min-height: 100%;
+}
+/* Since img is inline-block, it explodes the container.WE cannot align it using margin:auto; For that,*/
+.info-right img{
+    display: block;
+    margin: auto;
+    width: 70%;    
+    border-radius: 50%;
+}
+#testimonials{
+    background: url('../img/test-bg.jpg') no-repeat center center/cover;
+    height: 100%;
+    padding-top: 100px;
+}
+#testimonials h2{ text-align: center; padding-bottom: 30px; color: #fff;}
+#testimonials .testimonial{padding: 30px;margin-bottom: 30px;}
+.testimonial img{
+    float: left;
+    width: 80px;
+    margin-right: 10px;
+}
+
+/* contact Page */
+#contact-form  .form-group{margin-bottom: 20px;}
+#contact-form p{padding-bottom: 40px; line-height: 2em;}
+.form-group label{
+    display: block;
+    color: #444;
+}
+.form-group input,
+.form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.form-group textarea{
+    height: 100px;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+    outline: none;
+    border-color: #f7c08a;
+}
+#contact-form .btn{
+    width: 100%;
+}
+#contact-info{
+    margin: 30px 0;
+}
+/* Footer */
+#main-footer{
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+

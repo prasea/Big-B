@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: chocolate;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*Align items Horizontally*/
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: space-around;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: center;
+            /*Align items Vertically(flex-container must have height)*/
+            height: 400px;                        
+            align-items: stretch;
+            align-items: flex-start;
+            align-items: center;
+            align-items: flex-end;
+            /*Align item veritically(There should be vertical space between two set of items aligned horizontally)
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: space-around;
+            align-content: space-between;
+            align-content: center;*/
+        }
+        .box{
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 1rem;
+            margin: .5rem;
+            border: 1px solid #ccc;            
+        }
+        #box-2{
+            align-self: flex-start;
+            order: 2;
+        }
+        #box-1{order: 3;}
+        #box-3{order: 1;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-1">Item 1</div>
+        <div class="box" id="box-2">Item 2</div>
+        <div class="box" id="box-3">Item 3</div>
+        <!-- <div class="box" id="box-1">Item 1</div>
+        <div class="box" id="box-2">Item 2</div>
+        <div class="box" id="box-3">Item 3</div>
+        <div class="box" id="box-1">Item 1</div>
+        <div class="box" id="box-2">Item 2</div>
+        <div class="box" id="box-3">Item 3</div>
+        <div class="box" id="box-1">Item 1</div>
+        <div class="box" id="box-2">Item 2</div>
+        <div class="box" id="box-3">Item 3</div>
+        <div class="box" id="box-1">Item 1</div>
+        <div class="box" id="box-2">Item 2</div>
+        <div class="box" id="box-3">Item 3</div>
+        <div class="box" id="box-1">Item 1</div>
+        <div class="box" id="box-2">Item 2</div>
+        <div class="box" id="box-3">Item 3</div>
+        <div class="box" id="box-1">Item 1</div>
+        <div class="box" id="box-2">Item 2</div>
+        <div class="box" id="box-3">Item 3</div>
+        <div class="box" id="box-1">Item 1</div>
+        <div class="box" id="box-2">Item 2</div>
+        <div class="box" id="box-3">Item 3</div>
+        <div class="box" id="box-1">Item 1</div>
+        <div class="box" id="box-2">Item 2</div>
+        <div class="box" id="box-3">Item 3</div>
+        <div class="box" id="box-1">Item 1</div>         -->
+    </div>
+</body>
+</html>

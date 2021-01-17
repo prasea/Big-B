@@ -1,0 +1,12 @@
+let val;
+val = Math.PI;
+val = Math.E;
+val = Math.round(2.5);
+val = Math.ceil(2.2);
+val = Math.floor(2.9);
+val = Math.sqrt(256);
+val = Math.abs(-2.2);
+val = Math.min(1,2,4,-1);
+val = Math.max(1,2,3,0);
+val = Math.ceil(Math.random() * 10);
+console.log(val);

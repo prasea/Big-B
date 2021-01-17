@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <input type="text" name="customer" id="customer">
+        <input type="submit" value="Set Cookie" onclick="setCookie()">
+        <input type="submit" value="Get Cookie" onclick="getCookie()">
+        <input type="submit" value="Delete Cookie" onclick="deleteCookie()">
+    </form>
+    <script>
+        function setCookie(){
+            const customerName = document.getElementById('customer').value;
+            let now = new Date();
+            now.setMonth(now.getMonth()+1);        
+            document.cookie = `name=${customerName};expires=${now.toUTCString()};`;                
+        }
+        function getCookie(){
+            document.write(document.cookie);
+        }
+        function deleteCookie(){
+            const customerName = document.getElementById('customer').value;
+            let now = new Date();
+            now.setMonth(now.getMonth() - 1);
+            console.log(now)
+            document.cookie = `name=${customerName};expires=${now.toUTCString()};`;                            
+        }
+
+    </script>
+</body>
+</html>

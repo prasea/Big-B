@@ -4,41 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <form>
-        <div>
-            <label for="">Username</label><br>
-            <input type="text" placeholder="Username" id="name" autocomplete="username">
-            <div class="message1">
-                <small>Username must be atleast 4 character</small>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto mt-5 pt-5">
+                <form>
+                    <div>
+                        <label for="" class="form-label">Username</label><br>
+                        <input type="text" placeholder="Username" id="name" autocomplete="username" class="form-control">
+                        <div class="message1 form-text" >
+                            <small>Username must be atleast 4 character</small>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="" class="form-label">Password</label><br>
+                        <input type="text" placeholder="Credentials" id="password" class="form-control" autocomplete="current-password">
+                        <div class="message2 form-text">
+                            <small>Password should start with digit & end with $</small>
+                        </div>
+                    </div>
+                    <div>
+                        CSIT: <input type="checkbox" name="education" value="CSIT"  id="check1">
+                        BBA: <input type="checkbox" name="education" value="BBA"  id="check2">
+                        BCA: <input type="checkbox" name="education" value="BCA"  id="check3">
+                        <div class="message3 form-text">
+                            <small>Please choose only one Educational field</small>
+                        </div>
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-block btn-primary">
+                </form>
             </div>
         </div>
-        <div>
-            <label for="">Password</label><br>
-            <input type="text" placeholder="Credentials" id="password" autocomplete="current-password">
-            <div class="message2">
-                <small>Password should start with digit & end with $</small>
-            </div>
-        </div>
-        <div id="check">
-            CSIT: <input type="checkbox" name="education" value="CSIT"  id="check1">
-            BBA: <input type="checkbox" name="education" value="BBA"  id="check2">
-            BCA: <input type="checkbox" name="education" value="BCA"  id="check3">
-            <div class="message3">
-                <small>Please choose only one Educational field</small>
-            </div>
-        </div>
-        <input type="submit" value="Submit">
-    </form>
+    </div>
     <script>
         const UIname = document.getElementById('name'),
             UIpassword = document.getElementById('password'),
             UIform = document.querySelector('form');            
            
-        UIname.addEventListener('blur',validateUsername);
-        UIpassword.addEventListener('blur', validatePassword);
-        UIform.addEventListener('submit', validateCheckbox);
+        //UIname.addEventListener('blur',validateUsername);
+        //UIpassword.addEventListener('blur', validatePassword);
+        UIform.addEventListener('submit', validateForm);
+        function validateForm(e){
+            validateUsername();
+            validatePassword();
+            validateCheckbox();
+            e.preventDefault();
+        }
 
         function validateUsername()
         {
@@ -54,7 +67,7 @@
         function validatePassword()
         {
             const inputPassword = UIpassword.value;
-            const re = /^\d{1,}[a-zA-Z0-9$]{1,}?\$$/;
+            const re = /^\d{1,}([a-zA-Z0-9]{1,})?\$$/;
             if(!re.test(inputPassword)){
                 document.querySelector('.message2').style.display = 'block';
                 document.querySelector('.message2').style.backgroundColor = 'red';
@@ -64,23 +77,22 @@
         } 
         function getSelectedCheckboxValues()
         {
-            UIcheckboxes = document.querySelectorAll('input[name="education"]:checked');
+            let checkedValues = document.querySelectorAll('input[name="education"]:checked');                        
             let educations = [];
-            UIcheckboxes.forEach(function(checkbox){
-                educations.push(checkbox.value);
+            checkedValues.forEach(function(checkValue){
+                educations.push(checkValue.value);
             });
             return educations;
         }
-        function validateCheckbox(e)
-        {
+        function validateCheckbox()
+        {                             
             const items = getSelectedCheckboxValues();
-            if(items.length>1){
+            if(items.length === 1){
+                document.querySelector('.message3').style.display = 'none';                
+            } else{
                 document.querySelector('.message3').style.display = 'block';
                 document.querySelector('.message3').style.backgroundColor = 'red';
-            } else{
-                document.querySelector('.message3').style.display = 'none';
             }
-            e.preventDefault();
         }  
 
     </script>

@@ -75,7 +75,7 @@
                 document.querySelector('.message2').style.display = 'none';
             }
         } 
-        function getSelectedCheckboxValues()
+        function getCheckedValues()
         {
             let checkedValues = document.querySelectorAll('input[name="education"]:checked');                        
             let educations = [];
@@ -86,7 +86,7 @@
         }
         function validateCheckbox()
         {                             
-            const items = getSelectedCheckboxValues();
+            const items = getCheckedValues();
             if(items.length === 1){
                 document.querySelector('.message3').style.display = 'none';                
             } else{

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name" : "John Doe",
+        "email" : "cus1@cus.com",
+        "address" : "Lolang"
+    },
+    {
+        "id": 2,
+        "name" : "Jane Doe",
+        "email" : "cus2@cus.com",
+        "address" : "Tikathali"
+    },
+    {
+        "id": 3,
+        "name" : "Jeena Doe",
+        "email" : "cus3@cus.com",
+        "address" : "Lokanthali"
+    }
+]

@@ -1,8 +1,8 @@
 let http = new easyHTTP();
 // HTTP GET request for all posts
-// http.get("https://jsonplaceholder.typicode.com/posts", function(posts){
-//     console.log(posts);
-// })
+http.get("https://jsonplaceholder.typicode.com/posts", function(posts){
+    console.log(posts);
+})
 
 //HTTP GET request for Single Post
 // http.get("https://jsonplaceholder.typicode.com/posts/3", function(err,post){
@@ -30,10 +30,10 @@ const data = {
 //     }
 // })
 
-http.delete("https://jsonplaceholder.typicode.com/posts/3", function(err, response){
-    if(err === null){
-        console.log(response);
-    } else{
-        console.group(err);
-    }
-})
+// http.delete("https://jsonplaceholder.typicode.com/posts/3", function(err, response){
+//     if(err === null){
+//         console.log(response);
+//     } else{
+//         console.group(err);
+//     }
+// })

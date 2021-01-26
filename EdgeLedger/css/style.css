@@ -105,7 +105,7 @@ a{text-decoration: none;}
     background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
     color: #fff;
     height: 100vh;    
-    margin-top: -3.8rem;
+    margin-top: -58px;
 }
 #showcase .showcase-content{
     display: flex;
@@ -169,7 +169,7 @@ a{text-decoration: none;}
     display: flex;
 }
 #contact .contact-form,
-#contact .contact-map{
+#contact .contact-map {
     flex: 1;
 }
 #contact .contact-form .form-group{
